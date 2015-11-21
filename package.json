@@ -12,6 +12,9 @@
   "author": "jude",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.23.0",
+    "script-loader": "^0.6.1",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.8",
     "webpack-dev-server": "^1.12.1"
   }

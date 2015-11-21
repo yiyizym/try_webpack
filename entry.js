@@ -1,3 +1,5 @@
+
+// require("script!./es5-shim.min.js");
 require("./style.css");
 //var $ = require("jquery");
 $(function(){
