@@ -1,3 +1,4 @@
+var webpack = require("webpack");
 module.exports = {
     entry: "./entry.js",
     output: {
@@ -13,5 +14,10 @@ module.exports = {
         loaders: [
             { test: /\.css$/, loader: "style!css" }
         ]
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery" //should use the jquery version that support commonjs, otherwise the $ will be not defined. 
+        })
+    ]
 };
