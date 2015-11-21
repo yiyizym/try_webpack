@@ -1,3 +1,3 @@
 require("./style.css");
-require("jquery");
+var $ = require("jquery_new");
 $(".for_jquery").text(require("./content.js"));

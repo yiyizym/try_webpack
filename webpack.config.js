@@ -6,7 +6,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            jquery: "./jquery.js"
+            jquery: "./jquery-1.10.2.js"
         }
     },
     module: {
