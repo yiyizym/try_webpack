@@ -51,6 +51,13 @@
 	$(function(){
 	  $(".for_jquery").text(__webpack_require__(7));
 	  console.log("It must be a bug of webpack-dev-server that the dom is not yet ready but the script is already running. see $('.for_jquery') is ",$(".for_jquery").length);
+
+	  //load image
+	  $("img").each(function(index,ele){
+	    var originSrc = $(ele).data("src");
+	    var actualSrc = __webpack_require__(8)("./" + originSrc);
+	    $(ele).attr("src", actualSrc);
+	  });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
@@ -9881,6 +9888,33 @@
 
 	module.exports = "It also works from content.js.";
 
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./catty.png": 9
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 8;
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "b1571b485a06fa3f96958d3bff2ab2e8.png"
 
 /***/ }
 /******/ ]);

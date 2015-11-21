@@ -1,6 +1,7 @@
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
+    context: __dirname + "/app",
     entry: "./entry.js",
     output: {
         path: __dirname,
@@ -8,7 +9,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            jquery: "./jquery-1.10.2.js"
+            jquery: __dirname + "/jquery-1.10.2.js"
         }
     },
     module: {
@@ -16,7 +17,8 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            }
+            },
+            { test: /\.(png|jpg)$/, loader: "url-loader?limit=8192" }
         ]
     },
     plugins: [
