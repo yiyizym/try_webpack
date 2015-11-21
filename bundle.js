@@ -9894,7 +9894,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./catty.png": 9
+		"./catty.png": 9,
+		"./dog.jpg": 10
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -9915,6 +9916,12 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "b1571b485a06fa3f96958d3bff2ab2e8.png"
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4ff76ecc06d78f81ee1177866e3dbdbf.jpg"
 
 /***/ }
 /******/ ]);
